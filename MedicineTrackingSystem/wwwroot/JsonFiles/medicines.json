@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "fullName": "Paracetamol",
+    "brand": "Cipla",
+    "price": 20.00,
+    "quantity": 10,
+    "expiryDate": "07/01/2021",
+    "notes": ""
+  },
+  {
+    "id": 2,
+    "fullName": "Cetrizine",
+    "brand": "Cipla",
+    "price": 50.00,
+    "quantity": 50,
+    "expiryDate": "07/09/2020",
+    "notes": null
+  },
+  {
+    "id": 3,
+    "fullName": "Benedril",
+    "brand": "Reddys",
+    "price": 90.00,
+    "quantity": 9,
+    "expiryDate": "07/01/2021",
+    "notes": ""
+  },
+  {
+    "id": 6,
+    "fullName": "Renetac",
+    "brand": "Cipla",
+    "price": 7.0,
+    "quantity": 90,
+    "expiryDate": "07/20/2020",
+    "notes": ""
+  },
+  {
+    "id": 7,
+    "fullName": "Mondeslor",
+    "brand": "Reddys",
+    "price": 100.0,
+    "quantity": 500,
+    "expiryDate": "09/18/2020",
+    "notes": ""
+  }
+]

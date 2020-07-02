@@ -1,0 +1,16 @@
+[
+  {
+    "fullName": "Paracetamol",
+    "brand": "Cipla",
+    "price": 20.00,
+    "quantity": 10,
+    "expiryDate": "2021-07-01T20:55:33"
+  },
+  {
+    "fullName": "Cetrizine",
+    "brand": "Cipla",
+    "price": 40.00,
+    "quantity": 10,
+    "expiryDate": "2022-07-01T20:55:33"
+  }
+]

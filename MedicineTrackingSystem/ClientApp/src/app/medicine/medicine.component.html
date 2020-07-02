@@ -1,0 +1,60 @@
+<form [formGroup]="formGroup">
+  <div class="example-container">
+    <div class="row">
+      <div class="col-md-4">
+        <mat-form-field appearance="fill">
+          <mat-label>Full Name</mat-label>
+          <input matInput formControlName="fullName">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field appearance="fill">
+          <mat-label>Brand</mat-label>
+          <input matInput formControlName="brand">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <mat-form-field appearance="fill">
+          <mat-label>Quantity</mat-label>
+          <input matInput formControlName="price">
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field appearance="fill">
+          <mat-label>Price</mat-label>
+          <input matInput formControlName="quantity">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <mat-form-field appearance="fill">
+          <mat-label>Expiry Date</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="expiryDate">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field appearance="fill">
+          <mat-label>Notes</mat-label>
+          <input matInput formControlName="notes">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-3">
+        <button mat-raised-button color="primary" class="float-right" style="margin-right:50px;" (click)="addMedicine()">Save</button>
+        <button mat-raised-button color="primary" class="float-right" style="margin-right:15px;" (click)="goBack()">Back</button>
+      </div>
+    </div>
+  </div>
+</form>

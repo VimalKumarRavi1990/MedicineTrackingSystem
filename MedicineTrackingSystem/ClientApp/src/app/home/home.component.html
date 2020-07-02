@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-md-7">
+
+  </div>
+  <div class="col-md-4">
+    <mat-form-field appearance="fill">
+      <mat-label>Search</mat-label>
+      <input matInput (keyup)="filterHandler($event)">
+    </mat-form-field>
+  </div>
+</div>
+<table mat-table [dataSource]="gridData" class="mat-elevation-z8">
+  <ng-container matColumnDef="fullName">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{ element.fullName }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="brand">
+    <th mat-header-cell *matHeaderCellDef> Brand </th>
+    <td mat-cell *matCellDef="let element"> {{ element.brand }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="quantity">
+    <th mat-header-cell *matHeaderCellDef> Quantity </th>
+    <td mat-cell *matCellDef="let element" [ngStyle] = "{'background-color': element.quantity > 9 ? 'white' : 'yellow' }"> {{ element.quantity }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef> Price </th>
+    <td mat-cell *matCellDef="let element"> {{ element.price | number:'1.2-2' }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="expiryDate">
+    <th mat-header-cell *matHeaderCellDef> Expiry Date </th>
+    <td mat-cell *matCellDef="let element" [ngStyle]="{'background-color': checkExpiryDue(element.expiryDate) > 29 ? 'white' : 'red' }"> {{ element.expiryDate }} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<div class="row" style="padding-top:15px">
+  <div class="col-md-8">
+   
+  </div>
+  <div  class="col-md-2" style="padding-left:80px">
+    <button mat-raised-button color="primary" (click)="addMedicine()">Add</button>
+  </div>
+  
+</div>
